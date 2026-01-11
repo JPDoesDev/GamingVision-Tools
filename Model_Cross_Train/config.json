@@ -1,0 +1,34 @@
+{
+    "_comment_1": "=== MODEL CROSS TRAINER - AUTO ANNOTATOR CONFIG ===",
+    "_comment_2": "This tool uses an existing ONNX model to auto-annotate images for a new dataset",
+
+    "_comment_model": "=== MODEL SETTINGS ===",
+    "model_path": "./crosstrain_model/arc_raiders_model_v20260110_210957_1440.onnx",
+    "_comment_model_path": "Path to the ONNX model file to use for detection",
+
+    "model_classes_path": "./crosstrain_model/arc_raiders_model_v20260110_210957_1440.txt",
+    "_comment_model_classes_path": "Path to the source model's classes.txt (one class name per line)",
+
+    "_comment_target": "=== TARGET DATASET SETTINGS ===",
+    "images_dir": "./new_training_capture/images",
+    "_comment_images_dir": "Directory containing images to annotate (supports .jpg, .jpeg, .png)",
+
+    "labels_dir": "./new_training_capture/labels",
+    "_comment_labels_dir": "Directory where YOLO format annotation .txt files will be saved",
+
+    "target_classes_path": "./new_training_capture/labels/classes.txt",
+    "_comment_target_classes_path": "Path to target dataset's classes.txt. If empty or missing classes, they will be added automatically",
+
+    "_comment_detection": "=== DETECTION SETTINGS ===",
+    "classes_to_detect": ["interact", "waypoint"],
+    "_comment_classes_to_detect": "List of class names from the source model to detect. Must match names in model_classes_path exactly",
+
+    "confidence_threshold": 0.15,
+    "_comment_confidence_threshold": "Minimum confidence score (0.0-1.0) for a detection to be saved. Default: 0.3",
+
+    "use_nms": false,
+    "_comment_use_nms": "Enable Non-Maximum Suppression to filter overlapping detections. Default: false",
+
+    "nms_iou_threshold": 0.5,
+    "_comment_nms_iou_threshold": "IoU threshold for NMS (only used if use_nms is true). Higher = more overlapping boxes kept. Default: 0.5"
+}

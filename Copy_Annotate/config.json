@@ -1,0 +1,18 @@
+{
+    "_comment_1": "=== COPY ANNOTATE - STATIC ANNOTATION COPIER CONFIG ===",
+    "_comment_2": "Copies annotations for static screen elements (HUD, etc.) to all images",
+
+    "_comment_paths": "=== PATH SETTINGS ===",
+    "master_annotation_dir": "./Master_Annotation",
+    "_comment_master_dir": "Directory containing classes.txt and the master annotation .txt file to copy from",
+
+    "images_dir": "./images",
+    "_comment_images_dir": "Directory containing images to annotate",
+
+    "labels_dir": "./labels",
+    "_comment_labels_dir": "Directory where annotation .txt files will be created/updated",
+
+    "_comment_classes": "=== CLASS SELECTION ===",
+    "classes_to_copy": ["hud-ammo", "hud-hp"],
+    "_comment_classes_to_copy": "List of class names to copy from master annotation. Must match names in classes.txt exactly"
+}
